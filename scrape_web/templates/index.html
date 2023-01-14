@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Template Name: Brickary
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>蝦露比 - 網拍賣場搜尋網站</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul>
+        <!--<li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> chengyankai1216@gmail.com</li>-->
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li><a href="/admin">後台管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../static/images/demo/backgrounds/search_bg.jpg');">
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <h1><a href="">蝦露比</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="">主頁</a></li>
+          <li class="active"><a href="https://kerycheng.github.io/">關於我們</a></li>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear"> 
+    <div class="flexslider basicslider">
+      <ul class="slides">
+        <li>
+          <article>
+            <h3 class="heading">網拍賣場搜尋網站</h3>
+            <p>搜尋任何你想搜尋的商品</p>
+            <footer>
+              <form class="group" method="get" action="">
+                {% csrf_token %}
+                <fieldset>
+                    <input name="keyword" type="text" placeholder="輸入想搜尋的商品關鍵字">
+                    <button class="fa fa-sign-in" type="submit"><em>搜尋</em></button>
+                </fieldset>
+              </form>
+            </footer>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End Top Background Image Wrapper -->
+<div class="wrapper row3 coloured">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <div id="introblocks">
+      <ul class="nospace group">
+        <li class="one_third first">
+          <article>
+            <div>
+              <h6 class="heading">GitHub</h6>
+              <p>裡面會放上一些自己寫的小專案(Web Crawler、Face Recognition)以及學習筆記(machine learning、LeetCode)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <img src="../static/images/demo/GitHub-Logo.png" alt="">
+            <footer><a href="https://github.com/kerycheng">看更多</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <div>
+              <h6 class="heading">蝦皮購物</h6>
+              <p>讓你用最划算的價格買到所有需要想要的商品，包含美妝保健、流行服飾配件、母嬰居家、美食旅遊票券等千萬件熱銷好物</p>
+            </div>
+            <img src="../static/images/demo/Shopee-Logo.png" alt="">
+            <footer><a href="https://shopee.tw/">看更多</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <div>
+              <h6 class="heading">露天拍賣</h6>
+              <p>全台最大網路購物市集，提供最多新品與二手的玩具公仔、生活居家、3C家電等，各式免運、折扣優惠以及信用卡回饋</p>
+            </div>
+            <img src="../static/images/demo/Ruten-Logo.jpg" alt="">
+            <footer><a href="https://www.ruten.com.tw/">看更多</a></footer>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<div class="wrapper row4 bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <footer id="footer" class="hoc clear"> 
+    <h2 class="heading">蝦露比</h2>
+    <nav>
+      <ul class="nospace inline pushright uppercase">
+        <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="https://kerycheng.github.io/">關於我們</a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../static/layout/scripts/jquery.min.js"></script>
+<script src="../static/layout/scripts/jquery.backtotop.js"></script>
+<script src="../static/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../static/layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>

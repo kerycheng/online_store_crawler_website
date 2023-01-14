@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Template Name: Brickary
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>蝦露比 - 網拍賣場搜尋網站</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul>
+        <!--<li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> chengyankai1216@gmail.com</li>-->
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li><a href="/admin">後台管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../static/images/demo/backgrounds/search_bg.jpg');">
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <h1><a href="{% url 'index' %}">蝦露比</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="{% url 'index' %}">主頁</a></li>
+          <li class="active"><a href="https://kerycheng.github.io/">關於我們</a></li>
+      </nav>
+    </header>
+  </div>
+</div>
+<!-- End Top Background Image Wrapper -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <div class="content"> 
+      <div id="gallery">
+        <header class="heading">查詢結果：</header>
+        <table id="products_table" class="tablesorter">
+          <thead>
+            <tr>
+              <th>商品標題</th>
+              <th>最低價格</th>
+              <th>最高價格</th>
+              <th>已售出數量</th>
+              <th>賣場網站</th>
+              <th>資料更新日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for detail in details %}
+            <tr>
+              <td><a href="{{ detail.link }}">{{ detail.title }}</a></td>
+              <td>{{ detail.price_min }}</td>
+              <td>{{ detail.price_max }}</td>
+              <td>{{ detail.sold }}</td>
+              <td>{{ detail.store }}</td>
+              <td>{{ detail.time }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<div class="wrapper row4 bgded overlay" style="background-image:url('../images/demo/backgrounds/03.png');">
+  <footer id="footer" class="hoc clear"> 
+    <h2 class="heading">蝦露比</h2>
+    <nav>
+      <ul class="nospace inline pushright uppercase">
+        <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="https://kerycheng.github.io/">關於我們</a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../static/layout/scripts/jquery.min.js"></script>
+<script src="../static/layout/scripts/jquery.backtotop.js"></script>
+<script src="../static/layout/scripts/jquery.mobilemenu.js"></script>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.30.5/css/theme.blue.min.css"></link>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.30.5/js/jquery.tablesorter.min.js"></script>
+<script>
+$("#products_table").tablesorter({
+theme: "blue",
+widgets: ['zebra']
+});
+</script>
+</body>
+</html>
